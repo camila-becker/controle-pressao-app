@@ -1,0 +1,60 @@
+<main>
+  <div>
+    <img src="../../../../assets/medicine.svg" alt="">
+  </div>
+  <form [formGroup]="this.formulario">
+    <mat-form-field color="accent">
+        <mat-label>Nome</mat-label>
+        <input
+          matInput
+          formControlName="nome"
+          placeholder="Informe seu nome."
+        >
+        <mat-error>Preenchimento é obrigatório.</mat-error>
+    </mat-form-field>
+    <mat-form-field color="accent">
+        <mat-label>Pressão Diastólica</mat-label>
+        <input
+          matInput
+          formControlName="diastolica"
+          placeholder="Informe a pressão diastólica"
+          inputmode="numeric"
+          (keypress)="this.validarCampoNumerico($event)"
+        />
+        <mat-error>Preenchimento é obrigatório.</mat-error>
+    </mat-form-field>
+    <mat-form-field color="accent">
+        <mat-label>Pressão Sistólica</mat-label>
+        <input
+          matInput
+          formControlName="sistolica"
+          placeholder="Informe a pressão sistólica"
+          inputmode="numeric"
+          (keypress)="this.validarCampoNumerico($event)"
+        />
+        <mat-error>Preenchimento é obrigatório.</mat-error>
+    </mat-form-field>
+    <mat-form-field color="accent">
+        <mat-label>Batimentos Cardíacos</mat-label>
+        <input
+          matInput
+          formControlName="batimentos"
+          placeholder="Informe os batimentos cardíacos"
+          inputmode="numeric"
+          (keypress)="this.validarCampoNumerico($event)"
+        />
+        <mat-error>Preenchimento é obrigatório.</mat-error>
+    </mat-form-field>
+
+    <div>
+        <button mat-flat-button color="accent" (click)="this.salvar()">
+          <mat-icon [ngClass]="{'mostrar-spinner': this.carregando}">
+            <mat-spinner *ngIf="this.carregando" mode="indeterminate" color="accent" diameter="18">
+            </mat-spinner>
+          </mat-icon>
+          Salvar
+        </button>
+        <button mat-flat-button (click)="this.limpar()">Limpar</button>
+    </div>
+  </form>
+</main>

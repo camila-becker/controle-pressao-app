@@ -1,0 +1,47 @@
+.container {
+  div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+          width: 500px;
+          margin-top: 50px;
+      }
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .container {
+      div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          img {
+              width: 350px;
+              margin-top: 150px
+          }
+
+      }
+
+  }
+
+}
+
+
+@media (min-width: 1880px) {
+
+  .container {
+    div {
+        img {
+            width: 800px;
+        }
+
+    }
+
+}
+
+}

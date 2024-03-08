@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubunto Mono', monospace;
+}
+
+html, body { height: 100%; }
+body {
+    background-color: #e7e5e5;
+}
+
+.snackbar-success {
+  .mdc-snackbar__surface {
+    background-color: #359968 !important;
+  }
+
+  .mdc-snackbar__label,
+  .mat-mdc-button.mat-mdc-snack-bar-action{
+    color: #fff !important;
+  }
+}
+
+.snackbar-error {
+  .mdc-snackbar__surface {
+    background-color: #c53030 !important;
+  }
+
+  .mdc-snackbar__label,
+  .mat-mdc-button.mat-mdc-snack-bar-action{
+    color: #fff !important;
+  }
+}
