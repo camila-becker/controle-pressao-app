@@ -3,4 +3,5 @@ export interface ControlePressaoModel {
   medidaDiastolica: number;
   medidaSistolica: number;
   batimentosCardiacos: number;
+  dataDoRegistro?: string;
 }

@@ -8,7 +8,7 @@ import { ControlePressaoModel } from './model/controle-pressao.model';
 })
 export class ControlePressaoService {
 
-  private apiUrl = 'https://controle-pressao-api-d24fa326e17a.herokuapp.com/pressao'
+  private apiUrl = 'https://controle-pressao-api.onrender.com/pressao'
 
   constructor(private http: HttpClient) { }
 

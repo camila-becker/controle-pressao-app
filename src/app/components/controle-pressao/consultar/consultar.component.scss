@@ -11,40 +11,24 @@ main {
     align-items: center;
 
     img {
-        width: 400px;
+        width: 600px;
         margin-top: 20px;
     }
   }
 
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .mdc-data-table__table {
+    min-width: 830px;
 
-    .table-container {
-      display: flex;
-      flex-direction: column;
-      width: 580px;
-      height: 250px;
-      overflow: auto;
-
-      span {
-        margin-top: 20px;
-        font-size: 18px;
-        font-weight: bold;
-        color: #4a4a4a;
-      }
-
-      table {
-        width: 580px;
-      }
+    .mat-column-nome,
+    .mat-column-medidaDiastolica,
+    .mat-column-medidaSistolica,
+    .mat-column-batimentosCardiacos,
+    .mat-column-dataDoRegistro {
+      min-width: 200px;
+      max-width: 200px;
     }
   }
-}
 
-
-.hide-table {
-  display: none;
 }
 
 ::-webkit-scrollbar {
@@ -63,7 +47,7 @@ main {
   background: #858484;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
 
   main {
     display: flex;
@@ -78,20 +62,53 @@ main {
       }
     }
 
-    section {
+    .mat-mdc-table {
+      min-width: 100%;
+      width: 100%;
+      max-height: 500px;
+      overflow: auto;
 
-      .table-container {
-        margin: 0;
-        width: 360px;
-        height: 550px;
-        overflow: auto;
-
-        table {
-          width: 360px;
-          height: 550px;
-        }
+      .mat-column-nome,
+      .mat-column-medidaDiastolica,
+      .mat-column-medidaSistolica,
+      .mat-column-batimentosCardiacos,
+      .mat-column-dataDoRegistro {
+        min-width: 100px;
+        max-width: 100px;
       }
     }
+  }
+}
+
+@media (min-width: 1200px) {
+
+  main {
+
+    div {
+      margin-bottom: 20px;
+
+      img {
+        width: 450px;
+      }
+    }
+
+    .mat-mdc-table {
+      min-width: 680px !important;
+
+      .mat-column-nome,
+      .mat-column-medidaDiastolica,
+      .mat-column-medidaSistolica,
+      .mat-column-batimentosCardiacos {
+        min-width: 150px;
+        max-width: 150px;
+      }
+
+      .mat-column-dataDoRegistro {
+        min-width: 200px;
+        max-width: 200px;
+      }
+    }
+
   }
 
 }
@@ -99,26 +116,11 @@ main {
 @media (min-width: 1880px) {
 
   main {
-    width: 1500px;
+    width: 100%;
     margin: 100px auto 0;
     div {
       img {
-        width: 800px;
-      }
-    }
-
-    section {
-
-      .table-container {
-        margin-left: 100px;
-        width: 800px;
-        height: fit-content;
-        overflow: auto;
-
-        table {
-          width: 600px;
-          height: fit-content;
-        }
+        width: 690px;
       }
     }
   }
